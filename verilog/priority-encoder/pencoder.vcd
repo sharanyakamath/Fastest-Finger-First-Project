@@ -1,0 +1,45 @@
+$date
+	Fri Nov  3 22:33:30 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module test $end
+$var wire 4 ! binary_out [3:0] $end
+$var reg 10 " encoder_in [9:0] $end
+$scope module uut $end
+$var wire 10 # encoder_in [9:0] $end
+$var reg 4 $ binary_out [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 $
+b1111111111 #
+b1111111111 "
+b1111 !
+$end
+#10000
+b1110 !
+b1110 $
+b1111111110 "
+b1111111110 #
+#20000
+b1101 !
+b1101 $
+b1111111101 "
+b1111111101 #
+#30000
+b1100 !
+b1100 $
+b1111111011 "
+b1111111011 #
+#40000
+b1011 !
+b1011 $
+b1111110111 "
+b1111110111 #
