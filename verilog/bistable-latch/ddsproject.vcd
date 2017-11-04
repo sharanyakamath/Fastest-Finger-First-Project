@@ -1,0 +1,104 @@
+$date
+	Sat Nov  4 21:28:23 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module ic7475_tb $end
+$var wire 1 ! p9 $end
+$var wire 1 " p16 $end
+$var wire 1 # p15 $end
+$var wire 1 $ p10 $end
+$var reg 1 % p13 $end
+$var reg 1 & p2 $end
+$var reg 1 ' p3 $end
+$var reg 1 ( p4 $end
+$var reg 1 ) p6 $end
+$var reg 1 * p7 $end
+$scope module uut $end
+$var wire 1 % p13 $end
+$var wire 1 & p2 $end
+$var wire 1 ' p3 $end
+$var wire 1 ( p4 $end
+$var wire 1 ) p6 $end
+$var wire 1 * p7 $end
+$var reg 1 $ p10 $end
+$var reg 1 # p15 $end
+$var reg 1 " p16 $end
+$var reg 1 ! p9 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+0)
+0(
+0'
+0&
+0%
+x$
+x#
+x"
+x!
+$end
+#20
+1*
+1)
+1&
+#40
+0*
+0&
+#50
+0!
+1$
+0#
+0"
+1(
+1%
+#60
+1!
+1*
+#80
+0!
+0$
+1#
+0*
+0)
+1'
+#100
+1)
+0'
+1&
+0(
+0%
+#150
+1$
+0#
+1"
+1(
+1%
+#200
+0(
+0%
+#250
+1(
+1%
+#300
+0(
+0%
+#350
+1(
+1%
+#400
+0(
+0%
+#450
+1(
+1%
+#500
+0(
+0%

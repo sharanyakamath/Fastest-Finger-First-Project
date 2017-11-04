@@ -1,4 +1,4 @@
-`include "dlatch.v"
+
 module ic7475(p2,p3,p6,p7,p13,p4,p16,p15,p10,p9);
    
   input p2,p3,p6,p7,p13,p4;
