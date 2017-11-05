@@ -1,0 +1,43 @@
+Project Title: 	FIRST RESPONSE DETECTOR CIRCUIT
+
+Contributers: 	Palak Singhal 	16CO129
+		Sharanya Kamath 16CO140
+
+
+Idea: 
+
+The idea of this mini project is to create a circuit which determines which participant has reponded the earliest.
+These type of circuits are useful in the buzzer rounds of quiz shows.
+
+Applications:
+
+In first response rounds of quiz contests, the question is thrown open to all the teams.
+The person who knows the answer hits his switch first and then answers the question. 
+Sometimes two or more players hit the switch almost simultaneously and it is very difficult to detect which of
+them has pressed the switch first.
+
+Usage:
+
+The switches of the players are pressed in any order.
+The number of the player whose switch was pressed first is displayed on the display.
+Pressing other player switches does not affect the winner's number on the display.
+To reset, all the players' switches are switched off.
+
+Functionalities:
+
+IC 74LS75 4bit bistable latch: 	Used to lock the input of the player whose response was the earliest.
+				The enables of this IC automatically become 0 after passing the first input.
+				Hence the IC does not pass the inputs of the players who pressed their switches later.
+
+IC 74147- Priority Encoder:	Priority encoder encodes the active-low input condition into the
+				corresponding binary coded decimal (BCD) number output.
+
+IC 74LS04- Hex Inverter:	This IC consists of NOT gates which convert the active-low output of the
+				priority encoder into active-high.
+
+IC 74LS47-
+BCD to 7 segment decoder: 	This decoder converts the BCD active-high inputs to corresponding 7 segment inputs
+				for the 7 segment LED display.
+
+
+
