@@ -1,5 +1,5 @@
 $date
-	Tue Nov  7 17:38:13 2017
+	Tue Nov  7 21:28:44 2017
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1ps
 $end
-$scope module test $end
+$scope module Verilog_129_140 $end
 $var wire 1 ! flag $end
 $var wire 7 " display [6:0] $end
 $var wire 4 # decimal [3:0] $end
@@ -116,6 +116,9 @@ b100 %
 0!
 b110 $
 b110 %
+#180000
+b111 $
+b111 %
 #190000
-b1110 $
-b1110 %
+b1111 $
+b1111 %

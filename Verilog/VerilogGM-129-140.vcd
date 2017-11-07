@@ -1,0 +1,312 @@
+$date
+	Tue Nov  7 21:28:12 2017
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Verilog_129_140 $end
+$var wire 1 ! flag $end
+$var wire 7 " display [6:0] $end
+$var wire 4 # decimal [3:0] $end
+$var reg 4 $ player [3:0] $end
+$scope module uut $end
+$var wire 1 % enable $end
+$var wire 1 ! flag $end
+$var wire 4 & player [3:0] $end
+$var wire 1 ' reset $end
+$var wire 1 ( reset1 $end
+$var wire 1 ) w1 $end
+$var wire 1 * w2 $end
+$var wire 1 + w3 $end
+$var wire 1 , w4 $end
+$var wire 1 - w9 $end
+$var wire 4 . w8 [3:0] $end
+$var wire 4 / w7 [3:0] $end
+$var wire 10 0 w5 [9:0] $end
+$var wire 7 1 display [6:0] $end
+$var wire 4 2 decimal [3:0] $end
+$scope module hexseven $end
+$var wire 4 3 hex [3:0] $end
+$var reg 7 4 seven_segment [6:0] $end
+$upscope $end
+$scope module invert $end
+$var wire 1 5 a $end
+$var wire 1 6 b $end
+$var wire 1 7 c $end
+$var wire 1 8 d $end
+$var wire 1 9 w $end
+$var wire 1 : x $end
+$var wire 1 ; y $end
+$var wire 1 < z $end
+$upscope $end
+$scope module latch $end
+$var wire 1 ) d1 $end
+$var wire 1 * d2 $end
+$var wire 1 + d3 $end
+$var wire 1 , d4 $end
+$var wire 1 % enable $end
+$var reg 1 = q1 $end
+$var reg 1 > q2 $end
+$var reg 1 ? q3 $end
+$var reg 1 @ q4 $end
+$upscope $end
+$scope module p_encoder $end
+$var wire 10 A encoder_in [9:0] $end
+$var reg 4 B binary_out [3:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1111 B
+bz1111 A
+1@
+1?
+1>
+1=
+0<
+0;
+0:
+09
+18
+17
+16
+15
+b1111110 4
+b0 3
+b0 2
+b1111110 1
+bz1111 0
+b1111 /
+b0 .
+0-
+1,
+1+
+1*
+1)
+1(
+0'
+b0 &
+1%
+b0 $
+b0 #
+b1111110 "
+z!
+$end
+#10000
+b1 #
+b1 2
+b110000 "
+b110000 1
+b110000 4
+0%
+b1 .
+b1 3
+19
+0(
+05
+1-
+b1110 /
+b1110 B
+bz1110 0
+bz1110 A
+0=
+0)
+1'
+b1 $
+b1 &
+#20000
+0*
+b11 $
+b11 &
+#30000
+0+
+b111 $
+b111 &
+#40000
+0,
+b1111 $
+b1111 &
+#50000
+b0 #
+b0 2
+b1111110 "
+b1111110 1
+b1111110 4
+b0 .
+b0 3
+09
+15
+0-
+b1111 /
+b1111 B
+bz1111 0
+bz1111 A
+1=
+1%
+1(
+1,
+1+
+1*
+1)
+0'
+b0 $
+b0 &
+#60000
+b10 #
+b10 2
+b1101101 "
+b1101101 1
+b1101101 4
+0%
+b10 .
+b10 3
+1:
+0(
+06
+1-
+b1101 /
+b1101 B
+bz1101 0
+bz1101 A
+0>
+0*
+1'
+b10 $
+b10 &
+#70000
+0)
+b11 $
+b11 &
+#80000
+0+
+b111 $
+b111 &
+#90000
+0,
+b1111 $
+b1111 &
+#100000
+b0 #
+b0 2
+b1111110 "
+b1111110 1
+b1111110 4
+b0 .
+b0 3
+0:
+16
+0-
+b1111 /
+b1111 B
+bz1111 0
+bz1111 A
+1>
+1%
+1(
+1,
+1+
+1*
+1)
+0'
+b0 $
+b0 &
+#110000
+b100 #
+b100 2
+b110011 "
+b110011 1
+b110011 4
+0%
+b100 .
+b100 3
+1;
+0(
+07
+1-
+b1011 /
+b1011 B
+bz0111 0
+bz0111 A
+0@
+0,
+1'
+b1000 $
+b1000 &
+#120000
+0*
+b1010 $
+b1010 &
+#130000
+0+
+b1110 $
+b1110 &
+#140000
+0)
+b1111 $
+b1111 &
+#150000
+b0 #
+b0 2
+b1111110 "
+b1111110 1
+b1111110 4
+b0 .
+b0 3
+0;
+17
+0-
+b1111 /
+b1111 B
+bz1111 0
+bz1111 A
+1@
+1%
+1(
+1,
+1+
+1*
+1)
+0'
+b0 $
+b0 &
+#160000
+b11 #
+b11 2
+b1111001 "
+b1111001 1
+b1111001 4
+0%
+1:
+b11 .
+b11 3
+19
+0(
+06
+05
+1-
+b1100 /
+b1100 B
+bz1011 0
+bz1011 A
+0?
+0+
+1'
+b100 $
+b100 &
+#170000
+0*
+b110 $
+b110 &
+#180000
+0)
+b111 $
+b111 &
+#190000
+0,
+b1111 $
+b1111 &

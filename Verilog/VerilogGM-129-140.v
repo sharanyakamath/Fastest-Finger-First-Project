@@ -1,10 +1,11 @@
 /*
----------------------
-GATE MODELLING
----------------------
+						-----------------------------------------------
+							FIRST RESPONSE DETECTOR CIRCUIT
+						-----------------------------------------------
 
------------------------------------------------
-FIRST RESPONSE DETECTOR
+							----------------------------
+							GATE MODELLING VERILOG CODE
+							----------------------------
 -----------------------------------------------
 Mini-Project: CO202 - Design Of Digital Systems
 -----------------------------------------------
@@ -23,48 +24,51 @@ In first response rounds of quiz contests, the question is thrown open to all th
 The person who knows the answer hits his switch first and then answers the question. 
 Sometimes two or more players hit the switch almost simultaneously and it is very difficult to detect which of
 them has pressed the switch first.
--------------------------------------------------------------------------------------------------------------------
+________________________________________________________________________________________________________________________________________________
 
 -----------------
 Functionalities
 -----------------
-Inputs are accepted as the players' switch status whenever there is a change.
+-> Inputs are accepted as the players' switch status whenever there is a change.
 
-Enables to the latches are produced by the method of feedback. 
+-> Enables to the latches are produced by the method of feedback. 
 
-There is no need of a manual enable/reset switch as the desired conditions are produced automatically through feedback.
+-> There is no need of a manual enable/reset switch as the desired conditions are produced automatically through feedback.
 
-Active-low and Active-high conditions are managed appropriately.
+-> Active-low and Active-high conditions are managed appropriately.
 
-Decimal number is also displayed along with 7 segment output for better understandability.
+-> Decimal number is also displayed along with 7 segment output for better understandability.
 
-Foolproof method to determine the winner as the main code does not depend on the clock pulse difference between player responses. 
----------------------------------------------------------------------------------------------------------------------------------
+-> Foolproof method to determine the winner as the main code does not depend on the clock pulse difference between player responses. 
+________________________________________________________________________________________________________________________________________________
 
 ------------------------------
 Brief Description of the Code
 ------------------------------
-4bit bistable latch module:
+-> 4bit bistable latch module:
  	
 	Used to lock the input of the player whose response was the earliest.
 	The enables of this component automatically become 0 after passing the first input.
 	Hence the latch does not pass the inputs of the players who pressed their switches later.
 
-Priority Encoder module:
+-> Priority Encoder module:
 
 	Priority encoder encodes the active-low input condition into the
 	corresponding binary coded decimal (BCD) number output.
 
-Hex Inverter module:	
+-> Hex Inverter module:	
 
 	This component consists of NOT gates which convert the active-low output of the
 	priority encoder into active-high.
 
-Hex to 7 segment decoder module: 	
+-> Hex to 7 segment decoder module: 	
 
 	This decoder converts the 4 bit binary active-high inputs to corresponding 7 segment inputs
 	for the 7 segment LED display.
---------------------------------------------------------------------------------------------------------------------
+
+-> The input after getting inverted passes from 4-bit bistable latch to the active low priority encoder and simultaneously locks the bistable 
+   latch by turning the enable to 0 with the help of 2 nand gates. From the active low state it is converted to active high state using a hex     	inverter which then passes to a 7 segment decoder which displays the output corresponding to the winning player.  
+________________________________________________________________________________________________________________________________________________
 */
 
 //4 bit bistable d-latch
@@ -264,7 +268,7 @@ endmodule
 
 
 //Main circuit module
-module main(
+module VerilogM_129_140(
 		output flag,
 		input [3:0]player,	//Inputs provide by the 4 players
 		output [6:0]display,	//7 bit output shown on the led display
@@ -290,21 +294,21 @@ module main(
 	nand n7(reset1,reset,w9);
 	and n8(enable,reset1,reset1);
 
-	priority_encoder pen(w7,w5);
+	priority_encoder p_encoder(w7,w5);
 
 	hexinverter invert(w7[0],w7[1],w7[2],w7[3],w8[0],w8[1],w8[2],w8[3]);
 
 	hexto7segment hexseven(w8,display);
 
 	//Assigning the decimal values to output variable	
-	assign decimal[0]=w8[0];
-	assign decimal[1]=w8[1];
-	assign decimal[2]=w8[2];
-	assign decimal[3]=w8[3];
+	and a1( decimal[0],w8[0],w8[0]);
+	and a2( decimal[1],w8[1],w8[1]);
+	and a3( decimal[2],w8[2],w8[2]);
+	and a4( decimal[3],w8[3],w8[3]);
 
 endmodule
 
 
-
+/*x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-*/
 
 
