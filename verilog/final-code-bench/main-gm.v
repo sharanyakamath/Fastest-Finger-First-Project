@@ -1,5 +1,74 @@
+/*
+---------------------
+GATE MODELLING
+---------------------
+
+-----------------------------------------------
+FIRST RESPONSE DETECTOR
+-----------------------------------------------
+Mini-Project: CO202 - Design Of Digital Systems
+-----------------------------------------------
+Reg.No.
+Palak Singhal 	16CO129
+Sharanya Kamath 16CO140
+-----------------------------------------------
+
+---------
+Abstract: 
+---------
+The idea of this mini project is to create a circuit which determines which participant has reponded the earliest.
+These type of circuits are useful in the buzzer rounds of quiz shows.
+
+In first response rounds of quiz contests, the question is thrown open to all the teams.
+The person who knows the answer hits his switch first and then answers the question. 
+Sometimes two or more players hit the switch almost simultaneously and it is very difficult to detect which of
+them has pressed the switch first.
+-------------------------------------------------------------------------------------------------------------------
+
+-----------------
+Functionalities
+-----------------
+Inputs are accepted as the players' switch status whenever there is a change.
+
+Enables to the latches are produced by the method of feedback. 
+
+There is no need of a manual enable/reset switch as the desired conditions are produced automatically through feedback.
+
+Active-low and Active-high conditions are managed appropriately.
+
+Decimal number is also displayed along with 7 segment output for better understandability.
+
+Foolproof method to determine the winner as the main code does not depend on the clock pulse difference between player responses. 
+---------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------
+Brief Description of the Code
+------------------------------
+4bit bistable latch module:
+ 	
+	Used to lock the input of the player whose response was the earliest.
+	The enables of this component automatically become 0 after passing the first input.
+	Hence the latch does not pass the inputs of the players who pressed their switches later.
+
+Priority Encoder module:
+
+	Priority encoder encodes the active-low input condition into the
+	corresponding binary coded decimal (BCD) number output.
+
+Hex Inverter module:	
+
+	This component consists of NOT gates which convert the active-low output of the
+	priority encoder into active-high.
+
+Hex to 7 segment decoder module: 	
+
+	This decoder converts the 4 bit binary active-high inputs to corresponding 7 segment inputs
+	for the 7 segment LED display.
+--------------------------------------------------------------------------------------------------------------------
+*/
+
 //4 bit bistable d-latch
-module ic7475(
+module bistable_latch(
 		d1,	//Input to d-latch1
 		d2,	//Input to d-latch2
 		d3,	//Input to d-latch3
@@ -196,6 +265,7 @@ endmodule
 
 //Main circuit module
 module main(
+		output flag,
 		input [3:0]player,	//Inputs provide by the 4 players
 		output [6:0]display,	//7 bit output shown on the led display
 		output [3:0]decimal	//for decimal output	
@@ -212,7 +282,7 @@ module main(
 	not n3(w3,player[2]);
 	not n4(w4,player[3]);
 
-	ic7475 latch(w1,w2,w3,w4,enable,w5[0],w5[1],w5[2],w5[3]);
+	bistable_latch latch(w1,w2,w3,w4,enable,w5[0],w5[1],w5[2],w5[3]);
 
 	//Generating feedback for enable input of bistable latch
 	nand n5(w9,w5[0],w5[1],w5[2],w5[3]);
