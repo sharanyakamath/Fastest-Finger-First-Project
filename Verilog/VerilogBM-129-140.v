@@ -55,7 +55,7 @@ ________________________________________________________________________________
 
 
 */
-module VerilogM_129_140(   
+module VerilogBM_129_140(   
 		output flag,          //flag-turns 0 as soon as another player presses the switch                      
 		input [3:0]player,    // vector of 4 players 
 		output [6:0]display,  // vector of output in seven segment display

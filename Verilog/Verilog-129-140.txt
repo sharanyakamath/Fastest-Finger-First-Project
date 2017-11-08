@@ -40,6 +40,7 @@ In this zip folder, we have packed the following files:
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Compilation Procedure:
+->Uncomment the required instantiation statement in the testbench
 
 -> iverilog -o VerilogGM-129-140.vvp VerilogGM-129-140.v Verilog-129-140.v
 -> vvp VerilogGM-129-140.vvp

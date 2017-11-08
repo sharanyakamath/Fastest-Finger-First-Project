@@ -63,7 +63,8 @@ wire [6:0]display;					//7 bit output shown on the led display
 wire [3:0]decimal; 					//for decimal output
 wire flag;						//a wire flag for the behavioral model
 
-VerilogM_129_140 uut(flag, player,display,decimal);	//instantiation of the behavioral and gatelevel module		
+VerilogGM_129_140 uut(flag, player,display,decimal);	//instantiation of the gatelevel module		
+//VerilogBM_129_140 uut(flag, player,display,decimal);	//instantiation of the behavioral module	
 
 initial
 begin

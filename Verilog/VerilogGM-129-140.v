@@ -268,7 +268,7 @@ endmodule
 
 
 //Main circuit module
-module VerilogM_129_140(
+module VerilogGM_129_140(
 		output flag,
 		input [3:0]player,	//Inputs provide by the 4 players
 		output [6:0]display,	//7 bit output shown on the led display
